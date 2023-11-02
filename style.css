@@ -1,0 +1,91 @@
+html { box-sizing: border-box; }
+*, ::after, ::before { box-sizing: inherit; }
+
+body { 
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FAFAFA;
+    color: #8B8B8B; 
+    margin: 60px 20px;
+}
+
+h1 {
+    font-size: 28px;
+    color: #000000;
+}
+
+h2 {
+    font-size: 16px;
+    color: #000000;
+}
+
+.tlacitka {
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.sluzby1,
+.sluzby2 {
+    font-size: 13px;
+}
+
+.mapa,
+.letadlo {
+    width: 45px;
+    height: 40px;
+}
+
+.kaktus {
+    width: 40px;
+    height: 40px;
+}
+
+.palma,
+.slunecnik,
+.karavan {
+    width: 50px;
+    height: 40px;
+}
+
+.traveler {
+    width: 350px;
+    height: 290px;
+}
+
+.tlacitko1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #407BFF;
+    border-radius: 20px;
+    width: 195px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.tlacitko2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #8B8B8B;
+    border-radius: 20px;
+    width: 220px;
+    height: 40px;
+}
+
+.vylety,
+.exotika,
+.letenky,
+.destinace,
+.lehatka,
+.vozy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 6px #407BFF1F;
+    border-radius: 10px;
+    width: 460px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
