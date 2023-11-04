@@ -3,17 +3,17 @@ html { box-sizing: border-box; }
 
 body { 
     font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
     background-color: #FAFAFA;
     color: #8B8B8B; 
     margin: 60px 20px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 h1 {
     font-size: 28px;
+    font-weight: bold;
     color: #000000;
     margin-top: 40px;
     margin-bottom: 0;
@@ -21,9 +21,14 @@ h1 {
 
 h2 {
     font-size: 16px;
+    font-weight: bold;
     color: #000000;
     margin-top: 0;
     margin-bottom: 15px;
+}
+
+img {
+    max-width: 100%;
 }
 
 h1::after {
@@ -43,6 +48,7 @@ p {
 
 .tlacitka {
     font-size: 14px;
+    font-weight: 400;
     color: #FFFFFF;
 }
 
@@ -50,7 +56,6 @@ p {
 .sluzby2 {
     font-size: 13px;
 }
-
 
 .mapa,
 .letadlo {
@@ -76,15 +81,15 @@ p {
 }
 
 .tlacitko1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
     background-color: #407BFF;
     border-radius: 20px;
     width: 195px;
     height: 40px;
+    padding: 11px 30px;
     margin-top: 30px;
     margin-bottom: 10px;
+    margin-left: 153px;
 }
 
 .tlacitko2 {
@@ -96,6 +101,7 @@ p {
     width: 220px;
     height: 40px;
     margin-bottom: 60px;
+    margin-left: 140px;
 }
 
 .vylety,
