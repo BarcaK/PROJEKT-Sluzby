@@ -39,7 +39,7 @@ h1::after {
     background-color: #407BFF;
     margin-top: 10px;
     margin-bottom: 30px;
-    margin-left: 220px;
+    margin-left: auto;
 }
 
 p {
@@ -50,58 +50,49 @@ p {
     font-size: 14px;
     font-weight: 400;
     color: #FFFFFF;
-}
-
-.sluzby1,
-.sluzby2 {
-    font-size: 13px;
-}
-
-.mapa,
-.letadlo {
-    width: 45px;
-    height: 40px;
-}
-
-.kaktus {
-    width: 40px;
-    height: 40px;
-}
-
-.palma,
-.slunecnik,
-.karavan {
-    width: 50px;
-    height: 40px;
-}
-
-.traveler {
-    width: 350px;
-    height: 290px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .tlacitko1 {
-    text-align: center;
     background-color: #407BFF;
     border-radius: 20px;
     width: 195px;
     height: 40px;
-    padding: 11px 30px;
     margin-top: 30px;
     margin-bottom: 10px;
-    margin-left: 153px;
 }
 
 .tlacitko2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: #8B8B8B;
     border-radius: 20px;
     width: 220px;
     height: 40px;
     margin-bottom: 60px;
-    margin-left: 140px;
+}
+
+.tlacitko1 p,
+.tlacitko2 p {
+    padding: 11px 25px;
+}
+
+.sluzby1,
+.sluzby2 {
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sluzby1 p,
+.sluzby2 p {
+    padding-right: 20px;
+}
+
+.sluzby1 img,
+.sluzby2 img {
+    padding: 20px;
 }
 
 .vylety,
@@ -111,14 +102,13 @@ p {
 .lehatka,
 .vozy {
     display: flex;
+    flex: 1 1 80px;
     justify-content: center;
     align-items: center;
     justify-content: space-around;
     background-color: #FFFFFF;
     box-shadow: 0 4px 6px #407BFF1F;
     border-radius: 10px;
-    width: 460px;
-    height: 80px;
     margin-bottom: 15px;
 }
 
@@ -130,3 +120,71 @@ p {
 .destinace {
     margin-top: 30px;
 }
+
+@media screen and (min-width: 640px) {
+    .tlacitka {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .tlacitko1,
+    .tlacitko2 {
+        margin-top: 30px;
+        margin-bottom: 80px;   
+    }
+
+    .tlacitko1 {
+        margin-right: 20px;
+    }
+
+    h1::after {
+        margin-left: auto;
+    }
+
+    .sluzby1,
+    .sluzby2 {
+        flex-direction: row;
+        justify-content: center;
+        flex: 1 1 calc(100% / 3);
+    }
+
+    .sluzby1 p,
+    .sluzby2 p {
+        padding: 20px 15px;
+    }
+
+    .sluzby1 img,
+    .sluzby2 img {
+        padding-top: 40px;
+        padding-bottom: 0;
+    }
+
+    .vylety,
+    .exotika,
+    .letenky {
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-top: 40px;
+        margin-bottom: 80px;
+    }
+
+    .destinace,
+    .lehatka,
+    .vozy {
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-top: 40px;
+        margin-bottom: 0;
+    }
+
+    .exotika,
+    .lehatka {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    h1 {
+        margin-top: 40px;
+    }
+    }
