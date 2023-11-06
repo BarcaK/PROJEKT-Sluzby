@@ -37,8 +37,7 @@ h1::after {
     width: 60px;
     height: 2px;
     background-color: #407BFF;
-    margin-top: 10px;
-    margin-bottom: 30px;
+    margin: 10px auto 30px auto;
 }
 
 p {
@@ -49,9 +48,6 @@ p {
     font-size: 14px;
     font-weight: 400;
     color: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .tlacitko1 {
@@ -59,8 +55,7 @@ p {
     border-radius: 20px;
     width: 195px;
     height: 40px;
-    margin-top: 30px;
-    margin-bottom: 10px;
+    margin: 30px auto 10px auto;
 }
 
 .tlacitko2 {
@@ -68,20 +63,17 @@ p {
     border-radius: 20px;
     width: 220px;
     height: 40px;
-    margin-bottom: 60px;
+    margin: 0 auto 60px auto;
 }
 
 .tlacitko1 p,
 .tlacitko2 p {
-    padding: 11px 25px;
+    padding: 11px 29px;
 }
 
 .sluzby1,
 .sluzby2 {
     font-size: 13px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .sluzby1 p,
@@ -106,6 +98,7 @@ p {
     box-shadow: 0 4px 6px #407BFF1F;
     border-radius: 10px;
     margin-bottom: 15px;
+    min-width: 100%;
 }
 
 .letenky {
@@ -119,27 +112,29 @@ p {
 
 @media screen and (min-width: 640px) {
     .tlacitka {
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
+        display: flex;
+        flex: 1 1 50%;
     }
 
     .tlacitko1,
     .tlacitko2 {
         margin-top: 30px;
-        margin-bottom: 80px;   
+        margin-bottom: 80px;  
     }
 
     .tlacitko1 {
         margin-right: 20px;
     }
 
+    .tlacitko2 {
+        margin-left: 0;
+    }
 
     .sluzby1,
     .sluzby2 {
-        flex-direction: row;
+        display: flex;
         justify-content: center;
-        flex: 1 1 calc(100% / 3);
+        flex-basis: calc(100% / 3);
     }
 
     .sluzby1 p,
@@ -157,18 +152,18 @@ p {
     .exotika,
     .letenky {
         flex-direction: column;
-        justify-content: space-evenly;
         margin-top: 40px;
         margin-bottom: 80px;
+        min-width: 33.33%;
     }
 
     .destinace,
     .lehatka,
     .vozy {
         flex-direction: column;
-        justify-content: space-evenly;
         margin-top: 40px;
         margin-bottom: 0;
+        min-width: 33.33%;
     }
 
     .exotika,
@@ -185,7 +180,7 @@ p {
     @media screen and (min-width: 1100px) {
         body {
             width: 1040px;
-            margin: auto;
+            margin: 60px auto 60px auto;
             display: grid;
             grid-template-columns: 490px 60px 490px;
             grid-template-rows: auto auto auto;
@@ -200,14 +195,13 @@ p {
             
         }
 
-        .tlacitka {
-            align-items: start;
-            justify-content: start;
-        }
-
         .tlacitko1,
         .tlacitko2 {
             margin-bottom: 0;
+        }
+
+        .tlacitko1 {
+            margin-left: 0;
         }
 
         .sekce1 {
@@ -223,10 +217,14 @@ p {
             margin-top: 0;
         }
 
+        h1::after {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
         .odstavec2 {
             grid-column: 3 / 4;
             grid-row: 2 / 3;
-            max-width: 430px;
             padding-left: 60px;
             text-align: start;
             align-self: center;
@@ -257,5 +255,6 @@ p {
         .vozy {
             margin-top: 0;
             margin-bottom: 0;
+            min-width: 170px;
         }
     }
